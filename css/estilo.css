@@ -1,0 +1,220 @@
+    body {
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+    }
+    
+    .contenedor {
+        background-image: url(../img/background.svg);
+        background-size: cover;
+        height: 900px;
+        border-radius: 20px;
+    }
+    
+    .menu {
+        height: 75px;
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo {
+        font-size: 35px;
+        padding: 0 80px;
+        font-weight: bold;
+    }
+    
+    .menu_items {
+        display: flex;
+        list-style: none;
+        margin-right: 30px;
+    }
+    
+    .menu_items li {
+        border-radius: 20px;
+        margin: 0 5px;
+        background: #4A80FE;
+    }
+    
+    .menu_items li a {
+        padding: 7px 13px;
+        text-decoration: none;
+        font-size: 18px;
+        display: block;
+        color: white;
+    }
+    
+    .menu_items li:hover,
+    li:active {
+        background: #4349E6;
+        transition: .5s;
+    }
+    
+    .btnMenu {
+        margin-right: 30px;
+        font-size: 25px;
+        cursor: pointer;
+        display: none;
+    }
+    
+    ul.show {
+        top: 65px;
+    }
+    
+    .buscador {
+        height: 40px;
+        background: white;
+        width: 350px;
+        margin-left: 80px;
+        border-radius: 40px;
+        bottom: -100px;
+        border: solid 1px;
+        box-shadow: 0 5px 0 0 black;
+    }
+    
+    .buscador input {
+        width: 300px;
+        margin: 0 10px;
+        border: none;
+        margin-top: 10px;
+        outline: 0;
+        font-size: 16px;
+    }
+    
+    .marcadores {
+        margin-left: 80px;
+        margin-top: 100px;
+    }
+    
+    .textos {
+        margin-top: 100px;
+        margin-left: 80px;
+        bottom: -100px;
+    }
+    
+    .textos p {
+        font-size: 30px;
+    }
+    
+    .tarjeta {
+        width: 200px;
+        height: 320px;
+        background: #e1e1e1e1;
+        border-radius: 10px;
+    }
+    
+    .tarjeta:hover {
+        height: 350px;
+        transition: .5s;
+    }
+    
+    .tarjeta img {
+        width: 150px;
+        height: 120px;
+        margin-left: 25px;
+        margin-top: 20px;
+        border-radius: 10px;
+    }
+    
+    .tarjeta span {
+        margin-left: 15px;
+    }
+    
+    .tarjeta p {
+        margin-left: 15px;
+        margin-top: 0;
+    }
+    
+    .tarjeta .precio {
+        text-align: right;
+        margin-left: 150px;
+        background: #67F521;
+        border-radius: 20px;
+        width: 30px;
+        text-align: center;
+        padding: 0;
+    }
+    
+    .tarjeta .precio a {
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+        font-size: 20px;
+    }
+    
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        grid-auto-rows: 400px;
+    }
+    
+    @media screen and (max-width:952px) {
+        .logo {
+            font-size: 30px;
+            padding-left: 35px;
+        }
+        .menu_items li a {
+            font-size: 16px;
+        }
+        .grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
+    @media screen and (max-width:858px) {
+        .menu {
+            height: 65px;
+        }
+        .grid {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .btnMenu {
+            display: inline-flex;
+        }
+        .menu_items {
+            position: fixed;
+            width: 100vw;
+            height: calc(100%-65px);
+            background: #414141;
+            top: -100vh;
+            text-align: center;
+            transition: all .4s;
+            flex-direction: column;
+        }
+        .menu_items {
+            margin: 30px 0 0 0;
+            line-height: 30px;
+        }
+        .menu_items li {
+            background: none;
+            border-radius: 0;
+        }
+        .menu_items li:hover {
+            background: #414134;
+        }
+        .menu_items li a {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .logo {
+            font-size: 25px;
+            padding-left: 35px;
+        }
+        .buscador {
+            width: 200px;
+        }
+        .buscador input {
+            width: 150px;
+        }
+    }
+    
+    @media screen and (max-width:858px) and (orientation: landscape) {
+        .menu_items li {
+            margin: 5px 0 0 0;
+        }
+        .menu_items {
+            overflow: scroll;
+            height: calc(100%-65px);
+        }
+    }
